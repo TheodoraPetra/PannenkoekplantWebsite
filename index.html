@@ -27,6 +27,16 @@
         }
     </style>
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5f901d7208847600125c301c&product=inline-share-buttons" async="async"></script>
+    <script>
+        function createLink() {
+            const referral = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5).toUpperCase();
+        
+          const a = document.createElement('a');
+          a.className = 'link-a';
+          a.innerHTML = '<a href="https://theodoranegrea2.typeform.com/to/ZAn61Tjk#referral=' + referral + '" target="_blank">Submit your pannenkoek here</a>';
+          document.getElementById('link').appendChild(a);
+        }
+        </script>
 </head>
 <body>
     
@@ -47,7 +57,9 @@
         <button style="background-color: #FED9B790; margin: 10px; color: #0C0A3E90; height: 4em; border-radius: 13px; border-width: 3px ; border-style: groove; border-color: #FED9B790; font-family: Georgia; font-size: large;">Giving away a pannenkoekplant? <br> Get your owner link <strong>here</strong>!</button>
     </div>
 
-
+    <body onload="createLink()">
+        <div id="link"></div>
+      </body>
 
     
     
